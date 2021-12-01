@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <style>
+      .dfreport-container {
+        display: flex;
+        flex-direction: row;
+        /* flex-direction: column; */
+        width: 100%;
+        height: 100%;
+        /* flex-wrap: wrap; */
+        /* overflow: hidden !important; */
+      }
+
+      .dfreport {
+        /* overflow: hidden !important; */
+        display: flex;
+        /* flex-direction: row; */
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* height: 100%; */
+        width: 50%;
+      }
+
+      embed {
+        /* height: auto; */
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        /* overflow: hidden !important; */
+      }
+
+      /* .content .container .section-items:nth-child(4) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .content .container .section-items:nth-child(4) .row.spacing:not(.row.spacing:nth-child(1)) {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        flex-wrap: wrap;
+      } */
+    </style>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/fs-extra@10.0.0/lib/index.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/glob@7.2.0/glob.min.js"></script> -->
+  </head>
+
+  <body>
+    <div id="compareHtmlSelector">
+      <div id="compareHtmlSelector1"></div>
+      <div id="compareHtmlSelector2"></div>
+      <button onclick="loadHtml()">Render</button>
+      <button onclick="removeHtml()">Remove</button>
+    </div>
+    <div class="dfreport-container">
+      <!-- <div class="dfreport" id="dfreport1"> -->
+        <!-- <iframe src="http://www.pdf995.com/samples/pdf.pdf"></iframe> -->
+        <!-- <embed type="text/html" src="rbi/dfProfileReport-agg-mean-med-A-1637839317.html" /> -->
+        <!-- <embed type="text/html" src="dfProfileReport-MultiIndex-minimal-1637605663.html" /> -->
+
+        <!-- <embed type="text/html" src="https://pandas-profiling.github.io/pandas-profiling/examples/master/meteorites/meteorites_report.html" /> -->
+        <!-- https://pandas-profiling.github.io/pandas-profiling/examples/master/census/census_report.html -->
+        <!-- https://pandas-profiling.github.io/pandas-profiling/examples/master/meteorites/meteorites_report.html -->
+        <!-- https://pandas-profiling.github.io/pandas-profiling/examples/master/titanic/titanic_report.html -->
+      <!-- </div> -->
+
+      <!-- <div class="dfreport" id="dfreport2"> -->
+        <!-- <iframe src="http://www.pdf995.com/samples/pdf.pdf"></iframe> -->
+        <!-- <embed type="text/html" src="rbi/dfProfileReport-agg-mean-med-B-1637839754.html" /> -->
+        <!-- <embed type="text/html" src="dfProfileReport-MultiIndex-minimal-1637605663.html" /> -->
+
+        <!-- <embed type="text/html" src="https://pandas-profiling.github.io/pandas-profiling/examples/master/titanic/titanic_report.html" /> -->
+      <!-- </div> -->
+    </div>
+  </body>
+
+  <script>
+    // var glob = require("glob")
+    // import {glob} from "glob"
+    // const glob = window.glob;
+
+    // console.log(glob('**/*.html'));
+
+
+    /**
+     * @param {String} url - address for the HTML to fetch
+     * @return {String} the resulting HTML string fragment
+     * https://stackoverflow.com/a/52349344/9058671
+     */
+    async function fetchHtmlAsText(url) {
+      return await (await fetch(url)).text();
+    }
+
+    // async function loadHtml(elemId, url) {
+    async function loadHtml() {
+      // const contentDiv = document.getElementById(elemId);
+      const contentDiv = document.getElementsByClassName('dfreport-container')[0];
+      //   const contentDiv = document.getElementById("dfreport1");
+      //   const contentDiv = document.getElementsByClassName("dfreport");
+
+      //   url = document.getElementById('compareUrls').value;
+      const urls = document.getElementsByName('compareUrls');
+      console.log(urls);
+      // for (let url in urls) {
+      // for (const url in urls) {
+      [...urls].forEach(async (url, i, arr) => {
+        console.log(url);
+        console.log(url.value);
+        const htmlContent = await fetchHtmlAsText(url.value);
+        // console.log(htmlContent);
+        // const divContent = htmlContent;
+        // const divContent = "<div class=dfreporti>hi</div>";
+        // const divContent = `<div class=dfreport${i}>${htmlContent}</div>`;
+        // const divContent = `<div class=dfreport${i}><embed>${htmlContent}</embed></div>`
+        // console.log(divContent);
+        // contentDiv.innerHTML.appendChild(divContent);
+
+
+        if (!contentDiv.querySelector(`#dfreport-${url.selectedIndex}`)===true) {
+          // console.log(url.selectedIndex);
+          // const divContent = document.createElement("dfreport" + i);
+          const divContent = document.createElement("div");
+          divContent.className = "dfreport";
+          divContent.id = `dfreport-${url.selectedIndex}`;
+          // contentDiv.removeChild(contentDiv.querySelector(`#dfreport-${url.selectedIndex}`));
+          const embedContent = document.createElement("embed");
+          embedContent.type = "text/html";
+          embedContent.src = url.value;
+
+          divContent.appendChild(embedContent);
+          // divContent.appendChild(htmlContent);
+          // embedContent.insertAdjacentHTML("afterbegin", htmlContent);
+
+          contentDiv.appendChild(divContent);
+        }
+      });
+    //   contentDiv.innerHTML.appendChild(await fetchHtmlAsText(url));
+    }
+
+    // dropdown with options from list
+    //   document.getElementById('generate').onclick = function() {
+    function makeDropdown(elemId, urls) {
+      for (const ix in [1, ]) {
+
+      var select = document.createElement('select');
+      select.name = 'compareUrls';
+      select.id = 'compareUrls' + ix;
+      // select.setAttribute('multiple', '');
+
+      for (const val of urls) {
+        var option = document.createElement('option');
+        if (typeof val === 'string') {
+            option.value = val;
+            option.text = val;
+        } else {
+          [option.value, option.text] = val;
+        }
+        select.appendChild(option);
+      }
+
+      var label = document.createElement('label');
+      // label.innerHTML = "Choose your pets: "
+      // label.htmlFor = "pets";
+
+      document.getElementById('compareHtmlSelector').appendChild(label).appendChild(select);
+      }
+    }
+
+    async function removeHtml() {
+      urls = document.getElementsByName('compareUrls');
+      const contentDiv = document.getElementsByClassName('dfreport-container')[0];
+
+      [...urls].forEach(async (url, i, arr) => {
+          contentDiv.removeChild(contentDiv.querySelector(`#dfreport-${url.selectedIndex}`));
+      })
+    }
+
+    makeDropdown(document.getElementById('compareHtmlSelector'), [
+["A-B-side-by-side.html", "A-B-side-by-side.html (0 MB)"],
+["dfProfileReport-MultiIndex-A.html", "dfProfileReport-MultiIndex-A.html (9 MB)"],
+["dfProfileReport-MultiIndex-B.html", "dfProfileReport-MultiIndex-B.html (8 MB)"],
+["dfProfileReport-MultiIndex-minimal.html", "dfProfileReport-MultiIndex-minimal.html (16 MB)"],
+["dfProfileReport-agg-count-A.html", "dfProfileReport-agg-count-A.html (8 MB)"],
+["dfProfileReport-agg-count-B.html", "dfProfileReport-agg-count-B.html (8 MB)"],
+["dfProfileReport-agg-count-all.html", "dfProfileReport-agg-count-all.html (8 MB)"],
+["dfProfileReport-agg-max-A.html", "dfProfileReport-agg-max-A.html (4 MB)"],
+["dfProfileReport-agg-max-B.html", "dfProfileReport-agg-max-B.html (4 MB)"],
+["dfProfileReport-agg-max-all.html", "dfProfileReport-agg-max-all.html (5 MB)"],
+["dfProfileReport-agg-mean-A.html", "dfProfileReport-agg-mean-A.html (6 MB)"],
+["dfProfileReport-agg-mean-B.html", "dfProfileReport-agg-mean-B.html (6 MB)"],
+["dfProfileReport-agg-mean-all.html", "dfProfileReport-agg-mean-all.html (7 MB)"],
+["dfProfileReport-agg-mean-med-A.html", "dfProfileReport-agg-mean-med-A.html (6 MB)"],
+["dfProfileReport-agg-mean-med-B.html", "dfProfileReport-agg-mean-med-B.html (6 MB)"],
+["dfProfileReport-agg-median-A.html", "dfProfileReport-agg-median-A.html (4 MB)"],
+["dfProfileReport-agg-median-B.html", "dfProfileReport-agg-median-B.html (4 MB)"],
+["dfProfileReport-agg-median-all.html", "dfProfileReport-agg-median-all.html (5 MB)"],
+["dfProfileReport-agg-min-A.html", "dfProfileReport-agg-min-A.html (4 MB)"],
+["dfProfileReport-agg-min-B.html", "dfProfileReport-agg-min-B.html (4 MB)"],
+["dfProfileReport-agg-min-all.html", "dfProfileReport-agg-min-all.html (5 MB)"],
+["dfProfileReport-agg-min-max-A.html", "dfProfileReport-agg-min-max-A.html (6 MB)"],
+["dfProfileReport-agg-min-max-B.html", "dfProfileReport-agg-min-max-B.html (6 MB)"],
+["dfProfileReport-agg-min-max-mean-med-A.html", "dfProfileReport-agg-min-max-mean-med-A.html (13 MB)"],
+["dfProfileReport-agg-min-max-mean-med-B.html", "dfProfileReport-agg-min-max-mean-med-B.html (13 MB)"],
+]);
+  </script>
+</html>
