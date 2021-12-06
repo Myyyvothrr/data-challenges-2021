@@ -1,0 +1,30 @@
+# jekyll config file
+
+
+# remote_theme: le4ker/personal-jekyll-theme # https://jamstackthemes.dev/demo/theme/jekyll-personal/
+# remote_theme: thiagorossener/jekflix-template # https://jamstackthemes.dev/demo/theme/jekyll-jekflix-theme/
+remote_theme: mmistakes/minimal-mistakes # https://github.com/mmistakes/minimal-mistakes
+# remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+# remote_theme: kitian616/jekyll-TeXt-theme # https://jamstackthemes.dev/demo/theme/jekyll-text-theme/
+# remote_theme: joshgerdes/jekyll-uno # https://jamstackthemes.dev/demo/theme/jekyll-uno/
+# remote_theme: nrandecker/particle # https://jamstackthemes.dev/demo/theme/jekyll-particle/
+
+# https://github.com/mmistakes/mm-github-pages-starter/blob/master/_config.yml
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+minimal_mistakes_skin: dark
+
+# include:
+#   - .
+
+# footer:
+#   links:
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       url: "https://github.com/klezm/data-challenges-2021"
