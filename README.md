@@ -23,11 +23,40 @@ are very big (~100 MB). You can open them with e.g. Firefox.
 - Julia
     - https://github.com/invenia/Impute.jl
 
-## Sitemap
+## Sitemap Markdowns
 
 - [README.md](README.md)
 - [results/PandasProfileReport/README.md](results/PandasProfileReport/README.md)
 - [results/vis/README.md](results/vis/README.md)
+
+## Sitemap HTMLs
+
+- [results/PandasProfileReport/A-B-side-by-side.html](results/PandasProfileReport/A-B-side-by-side.html)
+- [results/PandasProfileReport/dfProfileReport-MultiIndex-A.html](results/PandasProfileReport/dfProfileReport-MultiIndex-A.html)
+- [results/PandasProfileReport/dfProfileReport-MultiIndex-B.html](results/PandasProfileReport/dfProfileReport-MultiIndex-B.html)
+- [results/PandasProfileReport/dfProfileReport-MultiIndex-minimal.html](results/PandasProfileReport/dfProfileReport-MultiIndex-minimal.html)
+- [results/PandasProfileReport/dfProfileReport-agg-count-A.html](results/PandasProfileReport/dfProfileReport-agg-count-A.html)
+- [results/PandasProfileReport/dfProfileReport-agg-count-B.html](results/PandasProfileReport/dfProfileReport-agg-count-B.html)
+- [results/PandasProfileReport/dfProfileReport-agg-count-all.html](results/PandasProfileReport/dfProfileReport-agg-count-all.html)
+- [results/PandasProfileReport/dfProfileReport-agg-max-A.html](results/PandasProfileReport/dfProfileReport-agg-max-A.html)
+- [results/PandasProfileReport/dfProfileReport-agg-max-B.html](results/PandasProfileReport/dfProfileReport-agg-max-B.html)
+- [results/PandasProfileReport/dfProfileReport-agg-max-all.html](results/PandasProfileReport/dfProfileReport-agg-max-all.html)
+- [results/PandasProfileReport/dfProfileReport-agg-mean-A.html](results/PandasProfileReport/dfProfileReport-agg-mean-A.html)
+- [results/PandasProfileReport/dfProfileReport-agg-mean-B.html](results/PandasProfileReport/dfProfileReport-agg-mean-B.html)
+- [results/PandasProfileReport/dfProfileReport-agg-mean-all.html](results/PandasProfileReport/dfProfileReport-agg-mean-all.html)
+- [results/PandasProfileReport/dfProfileReport-agg-mean-med-A.html](results/PandasProfileReport/dfProfileReport-agg-mean-med-A.html)
+- [results/PandasProfileReport/dfProfileReport-agg-mean-med-B.html](results/PandasProfileReport/dfProfileReport-agg-mean-med-B.html)
+- [results/PandasProfileReport/dfProfileReport-agg-median-A.html](results/PandasProfileReport/dfProfileReport-agg-median-A.html)
+- [results/PandasProfileReport/dfProfileReport-agg-median-B.html](results/PandasProfileReport/dfProfileReport-agg-median-B.html)
+- [results/PandasProfileReport/dfProfileReport-agg-median-all.html](results/PandasProfileReport/dfProfileReport-agg-median-all.html)
+- [results/PandasProfileReport/dfProfileReport-agg-min-A.html](results/PandasProfileReport/dfProfileReport-agg-min-A.html)
+- [results/PandasProfileReport/dfProfileReport-agg-min-B.html](results/PandasProfileReport/dfProfileReport-agg-min-B.html)
+- [results/PandasProfileReport/dfProfileReport-agg-min-all.html](results/PandasProfileReport/dfProfileReport-agg-min-all.html)
+- [results/PandasProfileReport/dfProfileReport-agg-min-max-A.html](results/PandasProfileReport/dfProfileReport-agg-min-max-A.html)
+- [results/PandasProfileReport/dfProfileReport-agg-min-max-B.html](results/PandasProfileReport/dfProfileReport-agg-min-max-B.html)
+- [results/PandasProfileReport/dfProfileReport-agg-min-max-mean-med-A.html](results/PandasProfileReport/dfProfileReport-agg-min-max-mean-med-A.html)
+- [results/PandasProfileReport/dfProfileReport-agg-min-max-mean-med-B.html](results/PandasProfileReport/dfProfileReport-agg-min-max-mean-med-B.html)
+- [results/dim_redus/viz_dimred_interactive.html](results/dim_redus/viz_dimred_interactive.html)
 
 ## Repo Visualizer
 
