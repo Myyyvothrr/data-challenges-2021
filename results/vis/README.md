@@ -43,7 +43,6 @@
 | kmeans-clusters2-pacmap-i_simple_median-sample0.1.png                 | kmeans-clusters2-pacmap-i_simple_most_frequent-sample0.1.png       |  
 | [![](kmeans-clusters2-pacmap-i_simple_median-sample0.1.jpg)](kmeans-clusters2-pacmap-i_simple_median-sample0.1.png)            | [![](kmeans-clusters2-pacmap-i_simple_most_frequent-sample0.1.jpg)](kmeans-clusters2-pacmap-i_simple_most_frequent-sample0.1.png)  |  
 
-
 <!--
 <table>
     <tr>
