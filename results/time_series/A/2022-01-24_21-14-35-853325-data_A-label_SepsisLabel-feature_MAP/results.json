@@ -1,0 +1,137 @@
+{
+  "dataset_name": "A",
+  "label_class": "SepsisLabel",
+  "imputation_method": "linear",
+  "feature": "MAP",
+  "test_size": 0.3,
+  "results_dir": "results/time_series/A/2022-01-24_21-14-35-853325-data_A-label_SepsisLabel-feature_MAP",
+  "time_series_shape": [
+    20336,
+    336
+  ],
+  "labels_shape": [
+    20336
+  ],
+  "x_train_shape": [
+    14235,
+    336
+  ],
+  "y_train_shape": [
+    14235
+  ],
+  "X_test_shape": [
+    6101,
+    336
+  ],
+  "y_test_shape": [
+    6101
+  ],
+  "train_results_KNeighborsClassifier": {
+    "no_sepsis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 12985
+    },
+    "sepsis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1250
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14235
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14235
+    }
+  },
+  "test_results_KNeighborsClassifier": {
+    "no_sepsis": {
+      "precision": 0.950475506908308,
+      "recall": 0.9525265240064736,
+      "f1-score": 0.9514999101850189,
+      "support": 5561
+    },
+    "sepsis": {
+      "precision": 0.5,
+      "recall": 0.4888888888888889,
+      "f1-score": 0.4943820224719101,
+      "support": 540
+    },
+    "accuracy": 0.9114899196852975,
+    "macro avg": {
+      "precision": 0.725237753454154,
+      "recall": 0.7207077064476812,
+      "f1-score": 0.7229409663284645,
+      "support": 6101
+    },
+    "weighted avg": {
+      "precision": 0.9106038836120474,
+      "recall": 0.9114899196852975,
+      "f1-score": 0.9110403692302446,
+      "support": 6101
+    }
+  },
+  "train_results_TimeSeriesForest": {
+    "no_sepsis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 12985
+    },
+    "sepsis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1250
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14235
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14235
+    }
+  },
+  "test_results_TimeSeriesForest": {
+    "no_sepsis": {
+      "precision": 0.9477918521054434,
+      "recall": 0.995684229455134,
+      "f1-score": 0.9711479435236342,
+      "support": 5561
+    },
+    "sepsis": {
+      "precision": 0.9073359073359073,
+      "recall": 0.4351851851851852,
+      "f1-score": 0.5882352941176471,
+      "support": 540
+    },
+    "accuracy": 0.9460744140304868,
+    "macro avg": {
+      "precision": 0.9275638797206753,
+      "recall": 0.7154347073201596,
+      "f1-score": 0.7796916188206406,
+      "support": 6101
+    },
+    "weighted avg": {
+      "precision": 0.9442110931846845,
+      "recall": 0.9460744140304868,
+      "f1-score": 0.9372563141711948,
+      "support": 6101
+    }
+  }
+}
