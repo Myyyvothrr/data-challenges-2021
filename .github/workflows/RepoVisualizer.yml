@@ -1,0 +1,40 @@
+name: Repo Visualizer
+
+on:
+  push:
+    branches:
+      - doesNotExist
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Repo Visualizer
+        uses: githubocto/repo-visualizer@main
+        with:
+          # A path (relative to the root of your repo) to where you would like the diagram to live. For example: images/diagram.svg. Default: diagram.svg
+          output_file: "RepoVisualization.svg"
+          # A list of paths to exclude from the diagram, separated by commas. For example: dist,node_modules
+          excluded_paths: "ignore,.github"
+          # excluded_paths: # optional
+          # A list of micromatch globs to exclude from the diagram, separated by semicolons. For example: **/*.png;docs/**/*.{png,ico}
+          # excluded_globs: # optional
+          # The directory (and its children) that you want to visualize in the diagram. Default: "" (repository root directory)
+          # root_path: # optional
+          # The maximum number of nested folders to show files within. Default: 9
+          # max_depth: # optional
+          # The commit message to use when updating the diagram. Default: Repo visualizer: updated diagram
+          # commit_message: # optional
+          # The branch name to push the diagram to (branch will be created if it does not yet exist). For example: diagram
+          branch: gh-pages
+          # Whether to push the new commit back to the repository. Must be true or false. Default: true
+          # should_push: # optional, default is true
+          # If given, the name of an artifact to be created containing the diagram. Default: don't create an artifact.
+          # artifact_name: # optional, default is ''

@@ -1,0 +1,141 @@
+{
+  "dataset_name": "A",
+  "label_class": "SepsisLabel",
+  "imputation_method": "linear",
+  "feature": "MAP",
+  "test_size": 0.3,
+  "results_dir": "results/time_series/A/2022-02-10_22-19-44-900394-data_A-label_SepsisLabel-feature_MAP-imputation_linear",
+  "time_series_shape": [
+    20326,
+    335
+  ],
+  "labels_shape": [
+    20326
+  ],
+  "x_train_shape": [
+    14228,
+    335
+  ],
+  "y_train_shape": [
+    14228
+  ],
+  "X_test_shape": [
+    6098,
+    335
+  ],
+  "y_test_shape": [
+    6098
+  ],
+  "train_results_KNeighborsClassifier": {
+    "no_sepsis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 12970
+    },
+    "sepsis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1258
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14228
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14228
+    }
+  },
+  "test_results_KNeighborsClassifier": {
+    "no_sepsis": {
+      "precision": 0.9494422454120187,
+      "recall": 0.9480776140855193,
+      "f1-score": 0.9487594390507013,
+      "support": 5566
+    },
+    "sepsis": {
+      "precision": 0.4648148148148148,
+      "recall": 0.4718045112781955,
+      "f1-score": 0.46828358208955223,
+      "support": 532
+    },
+    "accuracy": 0.9065267300754346,
+    "macro avg": {
+      "precision": 0.7071285301134167,
+      "recall": 0.7099410626818574,
+      "f1-score": 0.7085215105701268,
+      "support": 6098
+    },
+    "weighted avg": {
+      "precision": 0.9071625154878283,
+      "recall": 0.9065267300754346,
+      "f1-score": 0.9068418995453993,
+      "support": 6098
+    }
+  },
+  "test_results_KNeighborsClassifier_latex_all": "\textbf{KNN} & $0.907$ & $0.709$ & $0.707$ & $0.710$ & $0.907$ & $0.907$ & $0.907$ \\",
+  "test_results_KNeighborsClassifier_latex_per_class": "\textbf{KNN} & $0.949$ & $0.949$ & $0.948$ & $0.468$ & $0.465$ & $0.472$ \\",
+  "train_results_TimeSeriesForest": {
+    "no_sepsis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 12970
+    },
+    "sepsis": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1258
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14228
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 14228
+    }
+  },
+  "test_results_TimeSeriesForest": {
+    "no_sepsis": {
+      "precision": 0.9464928828674327,
+      "recall": 0.9915558749550845,
+      "f1-score": 0.9685004825831359,
+      "support": 5566
+    },
+    "sepsis": {
+      "precision": 0.8239700374531835,
+      "recall": 0.41353383458646614,
+      "f1-score": 0.5506883604505632,
+      "support": 532
+    },
+    "accuracy": 0.9411282387668088,
+    "macro avg": {
+      "precision": 0.8852314601603082,
+      "recall": 0.7025448547707753,
+      "f1-score": 0.7595944215168495,
+      "support": 6098
+    },
+    "weighted avg": {
+      "precision": 0.9358037792661895,
+      "recall": 0.9411282387668088,
+      "f1-score": 0.9320498349979394,
+      "support": 6098
+    }
+  },
+  "test_results_TimeSeriesForest_latex_all": "\textbf{TSF} & $0.941$ & $0.760$ & $0.885$ & $0.703$ & $0.932$ & $0.936$ & $0.941$ \\",
+  "test_results_TimeSeriesForest_latex_per_class": "\textbf{TSF} & $0.969$ & $0.946$ & $0.992$ & $0.551$ & $0.824$ & $0.414$ \\"
+}
